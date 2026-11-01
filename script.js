@@ -1,3 +1,16 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyAqjvgvci026q_VTe5pomRfssR9rjkHcKA",
+  authDomain: "letter-df023.firebaseapp.com",
+  projectId: "letter-df023",
+  storageBucket: "letter-df023.firebasestorage.app",
+  messagingSenderId: "805128627095",
+  appId: "1:805128627095:web:fd07e8905361159053dad2",
+  measurementId: "G-SVVC2TRVH8"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
 (() => {
   const MASTER_PASSWORD = 'shamelle';
   const $ = id => document.getElementById(id);
