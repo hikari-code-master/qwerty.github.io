@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Love Letters 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span></div>
+<main class="shell">
+  <section id="loginPage" class="card">
+    <div class="tiny-heart">💌</div>
+    <div class="brand">A little place for us</div>
+    <h1>Our Love Letters</h1>
+    <p class="subtitle">A private little corner for the words we want to keep. Only our secret password opens the door. ♡</p>
+    <form id="masterForm">
+      <label for="masterPassword">Our shared password</label>
+      <input id="masterPassword" type="password" placeholder="Enter the password…" autocomplete="current-password" required>
+      <div class="form-actions"><button type="submit">Unlock our letters ♡</button></div>
+      <div id="masterError" class="error" role="status"></div>
+    </form>
+  </section>
+
+  <section id="foldersPage" class="card hidden">
+    <div class="topbar"><div class="brand">♡ Saksham &amp; Jhenelle ♡</div><button class="textbtn" id="lockButton">Lock ↗</button></div>
+    <h1>Our little library</h1>
+    <p class="subtitle">Choose whose letter box you want to open. Each folder can have its own password, set only once.</p>
+    <div class="folder-grid">
+      <button class="folder" data-folder="saksham"><span class="icon">📁</span><strong>Letter to Saksham</strong><small id="status-saksham">Password not set yet</small></button>
+      <button class="folder" data-folder="jhenelle"><span class="icon">📁</span><strong>Letter to Jhenelle</strong><small id="status-jhenelle">Password not set yet</small></button>
+    </div>
+    <div class="notice">💗 Tip: set a password that only the folder's owner knows. Letters are saved in this browser on this device.</div>
+  </section>
+
+  <section id="passwordPage" class="card hidden">
+    <button class="textbtn" id="backFromPassword">← Back to folders</button>
+    <div class="tiny-heart">🔐</div>
+    <div class="brand">Your own little secret</div>
+    <h2 id="passwordTitle">Set your folder password</h2>
+    <p class="subtitle" id="passwordSubtitle">Choose a password for this folder.</p>
+    <form id="folderPasswordForm">
+      <label for="folderPassword" id="folderPasswordLabel">Folder password</label>
+      <input id="folderPassword" type="password" placeholder="Enter a password" autocomplete="new-password" required>
+      <div id="confirmWrap">
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" type="password" placeholder="Type it again" autocomplete="new-password">
+      </div>
+      <div class="form-actions"><button type="submit" id="passwordSubmit">Set password &amp; open 💌</button></div>
+      <div id="folderError" class="error" role="status"></div>
+    </form>
+    <div class="notice">For this simple version, the password is stored in this browser. It isn't a secure online vault.</div>
+  </section>
+
+  <section id="editorPage" class="card hidden">
+    <div class="topbar"><button class="textbtn" id="backFromEditor">← Folders</button><button class="textbtn" id="closeLetter">Lock folder 🔒</button></div>
+    <div class="editor-head"><span class="folder-emoji">💌</span><div><h2 id="editorTitle">Letter</h2><p>Your words, saved here.</p></div></div>
+    <label for="letterTitle">Letter title (optional)</label>
+    <input id="letterTitle" type="text" maxlength="100" placeholder="e.g. A little note for you…">
+    <label for="letterBody">Write your letter</label>
+    <textarea id="letterBody" placeholder="Dear you…&#10;&#10;Write whatever is in your heart. ♡"></textarea>
+    <div class="editor-actions"><button id="saveLetter">Save letter ♡</button><button class="secondary" id="clearLetter">Clear editor</button><span class="saved" id="saveStatus" role="status"></span></div>
+    <div class="notice">Your writing is saved in this browser on this device. Use the same browser to find it again.</div>
+  </section>
+  <footer>made with love, for two hearts ♡</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
